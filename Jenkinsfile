@@ -1,32 +1,11 @@
-pipeline {
-    agent any
-
-    stages {
-        stage ('Build Image') {
-
-            steps {
-                withEnv(["PATH=/usr/local/bin:$PATH"]){ 
-                             sh 'make build'
-                }
-            }
-       }
-
-        stage ('Push Image') {
-
-            steps {
-                 withEnv(["PATH=/usr/local/bin:$PATH"]){ 
-                            sh 'make push'
-                 }
-            }
-        }
-
-
-        stage ('Deployment Conatiner') {
-            steps {
-                withEnv(["PATH=/usr/local/bin:$PATH"]){ 
-                            sh 'make deploy'
-                }
-          }
-       }
+node {
+    stage ('Build Image') {
+        sh 'make build'
+    }
+    stage ('Push Image') {
+        sh 'make push'
+    }
+    stage ('Deploy to Container') {
+        sh 'make deploy'
     }
 }
