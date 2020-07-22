@@ -1,5 +1,5 @@
 FROM nginx
 
-MAINTAINER Prashanth Pullaikodi <prashanthppp@gmail.com>
+MAINTAINER Srinath Chandra <csrinath123@gmail.com>
 
 COPY ./index.html /usr/share/nginx/html/index.html
