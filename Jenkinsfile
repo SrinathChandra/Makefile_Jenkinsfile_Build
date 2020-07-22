@@ -1,4 +1,4 @@
-node {
+node('java-docker-slave') {
     stage ('Build Image') {
         sh 'make build'
     }
