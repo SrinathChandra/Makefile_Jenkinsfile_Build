@@ -3,9 +3,9 @@
 
 DOCKER = docker
 AAP_NAME := nginx
-RELEASE_VERSION := 4.0-patch
+RELEASE_VERSION := 1.0-patch
 RELEASE_TAG := test-$(RELEASE_VERSION)
-DOCKER_HUB_REPO := ""
+DOCKER_HUB_REPO := "https://github.com/"
 USER_NAME = ""
 PASSWORD = ""
 
